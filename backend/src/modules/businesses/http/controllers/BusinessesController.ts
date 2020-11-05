@@ -3,9 +3,9 @@ import FetchBusinessesService from '../../services/FetchBusinessesService';
 
 export default class BusinessesController {
   async index(request: Request, response: Response): Promise<Response> {
-    const fetchBusiness = new FetchBusinessesService();
+    const fetchBusinessess = new FetchBusinessesService();
 
-    const businesses = await fetchBusiness.execute();
+    const businesses = await fetchBusinessess.execute();
 
     return response.json(businesses);
   }
