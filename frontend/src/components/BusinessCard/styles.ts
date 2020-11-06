@@ -51,7 +51,7 @@ export const Top = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #fb6c63;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 
@@ -59,14 +59,18 @@ export const Top = styled.div`
     font-size: 25px;
     font-weight: bold;
     margin: 10px;
-    color: #000;
+    color: #fff;
     text-align: center;
   }
 
   span {
-    font-size: 20px;
     margin: 10px;
     color: #000;
+    display: flex;
+
+    p {
+      font-weight: bolder;
+    }
   }
 `;
 
@@ -81,6 +85,9 @@ export const Bottom = styled.div`
   align-items: center;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  span {
+    margin-top: 10px;
+  }
 `;
 
 export const AdressInfo = styled.div`
@@ -100,7 +107,8 @@ export const MapInfo = styled.div<Props>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 40%;
+  padding: 5px;
   border: 1px solid #fb6c63;
   border-radius: 8px;
   transition: background-color 0.3s;

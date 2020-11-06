@@ -12,17 +12,18 @@ const BusinessCard: React.FC<any> = ({ business }: any) => {
     return finalDate;
   }, []);
 
+  const showStartDate = useCallback(() => {
+    return `START DATE: ${parseIsoDate(business.location_start_date)}`;
+  }, []);
+
   return (
     <Container>
       <Card>
         <Top>
           <strong>{business.business_name}</strong>
-          <span>
-            Start Date:
-            {parseIsoDate(business.location_start_date)}
-          </span>
         </Top>
         <Bottom>
+          <span>{showStartDate()}</span>
           <AdressInfo>
             <p>{business.street_address}</p>
             <p>{business.city}</p>
@@ -35,15 +36,15 @@ const BusinessCard: React.FC<any> = ({ business }: any) => {
                 event.preventDefault();
                 if (business.location_1) {
                   window.open(
-                    `${MAP_URL}/${business.location_1.latitude}, ${business.location_1.longitude}`,
+                    `${MAP_URL} / ${business.location_1.latitude}, ${business.location_1.longitude}`,
                   );
                 }
               }}
             >
-              <FiMap size={40} style={{ margin: 10 }} />
+              <FiMap size={30} style={{ margin: 10 }} />
               <span>
                 {business.location_1
-                  ? 'Open on Google maps'
+                  ? 'Open in Google maps'
                   : 'No coordinates found'}
               </span>
             </Link>

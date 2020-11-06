@@ -84,7 +84,7 @@ const Home: React.FC = () => {
     }
     return (
       <Button onClick={showBusinessWithMostLocations}>
-        <p>Business wih most locations</p>
+        <p>Business with most locations</p>
       </Button>
     );
   }, [isBusinessWithMostLocationsSelected, showBusinessWithMostLocations]);
@@ -106,6 +106,16 @@ const Home: React.FC = () => {
     );
   }, [isOldestBusinessSelected, showOldestBusiness]);
 
+  const renderHeaderTitle = useCallback(() => {
+    if (isOldestBusinessSelected) {
+      return <p>Oldest Business</p>;
+    }
+    if (isBusinessWithMostLocationsSelected) {
+      return <p>Business With Most Locations</p>;
+    }
+    return <p>Active Businesses</p>;
+  }, [isBusinessWithMostLocationsSelected, isOldestBusinessSelected]);
+
   if (loading) {
     return (
       <LoadingContainer>
@@ -115,9 +125,7 @@ const Home: React.FC = () => {
   }
   return (
     <Container>
-      <Header>
-        <p>Active Businesses</p>
-      </Header>
+      <Header>{renderHeaderTitle()}</Header>
       <ButtonContainer>
         <ButtonOptions>
           {renderBusinessWithMoreLocationsButton()}
