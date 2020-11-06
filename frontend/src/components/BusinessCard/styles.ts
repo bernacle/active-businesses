@@ -1,4 +1,15 @@
-import styled, { css } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
+
+const appearFromLeft = keyframes`
+  from{
+    opacity: 0;
+    transform: translateX(-50px)
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0)
+  }
+`;
 
 interface Props {
   locationExists: boolean;
@@ -7,9 +18,31 @@ interface Props {
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  width: 580px;
+  margin-top: 30px;
+  animation: ${appearFromLeft} 1s;
+`;
+
+export const Card = styled.div`
+  flex-direction: column;
+  width: 380px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+
+  justify-content: flex-start;
+
+  &:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
 `;
 
 export const Top = styled.div`

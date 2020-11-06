@@ -1,7 +1,7 @@
 import React, { ReactElement, useCallback } from 'react';
 
 import { JsxElement } from 'typescript';
-import { Container, Card } from './styles';
+import { Container } from './styles';
 import BusinessProps from '../../interfaces/BusinessProps';
 import BusinessCard from '../BusinessCard';
 

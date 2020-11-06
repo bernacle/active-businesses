@@ -6,11 +6,14 @@ export default createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
   outline: 0;
+  -webkit-overflow-scrolling: touch;
 }
 
+
+
 body {
-  background: #FFF;
-  color: #000;
+    background-color: #f6f7f9;
+    color: #000;
   --webkit-font-smoothing: antialiased;
 }
 
@@ -26,4 +29,10 @@ h1, h2, h3, h4, h5, h6, strong {
 button {
  cursor: pointer;
 }
+
+::-webkit-scrollbar {
+display: none;
+}
+
+
 `;

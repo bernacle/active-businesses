@@ -10,6 +10,17 @@ export const Container = styled.div`
   position: relative;
 `;
 
+export const LoadingContainer = styled.div`
+  background-color: #f6f7f9;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  text-align: center;
+`;
+
 export const Header = styled.div`
   display: flex;
   height: 30%;
@@ -54,7 +65,7 @@ export const ButtonOptions = styled.div`
 export const Button = styled.button`
   background: #fb6c63;
   height: 130px;
-  width: 190px;
+  width: 140px;
   border-radius: 8px;
   border: 0;
   padding: 0 16px;
