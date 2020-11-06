@@ -19,7 +19,7 @@
     "ts-node-dev": "^1.0.0"
   },
   "scripts": {
-    "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/server.ts"
+    "dev:server": "ts-node-dev --transpile-only --ignore-watch node_modules src/shared/server.ts"
   },
   "dependencies": {
     "axios": "^0.21.0",
