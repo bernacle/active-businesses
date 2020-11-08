@@ -11,7 +11,7 @@
 
 **Frontend**
 
-- Open the backend folder: 
+- Open the frontend folder: 
 - `cd frontend`
 - Run yarn to install the dependencies:
 - `yarn`
