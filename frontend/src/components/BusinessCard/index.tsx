@@ -1,4 +1,4 @@
-import React, { useCallback, ReactElement } from 'react';
+import React, { useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMap } from 'react-icons/fi';
 import { Container, AdressInfo, MapInfo, Top, Bottom, Card } from './styles';
@@ -14,7 +14,7 @@ const BusinessCard: React.FC<any> = ({ business }: any) => {
 
   const showStartDate = useCallback(() => {
     return `START DATE: ${parseIsoDate(business.location_start_date)}`;
-  }, []);
+  }, [business.location_start_date, parseIsoDate]);
 
   return (
     <Container>
