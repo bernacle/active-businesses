@@ -17,4 +17,5 @@
 - `yarn`
 - Start the server:
 - `yarn start`
+- Wait for the browser to open
 
