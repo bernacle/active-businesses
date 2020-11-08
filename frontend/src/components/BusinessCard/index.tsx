@@ -36,7 +36,7 @@ const BusinessCard: React.FC<any> = ({ business }: any) => {
                 event.preventDefault();
                 if (business.location_1) {
                   window.open(
-                    `${MAP_URL} / ${business.location_1.latitude}, ${business.location_1.longitude}`,
+                    `${MAP_URL}/${business.location_1.latitude},${business.location_1.longitude}`,
                   );
                 }
               }}
